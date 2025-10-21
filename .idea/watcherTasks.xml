@@ -1,25 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ProjectTasksOptions">
-    <TaskOptions isEnabled="false">
-      <option name="arguments" value="-NoProfile -ExecutionPolicy Bypass -Command &quot;cd '$ProjectFileDir$'; git add -A; if ((git status --porcelain)) { git commit -m \&quot;auto: $env:Username $(Get-Date -Format o)\&quot;; git push; }&quot;" />
-      <option name="checkSyntaxErrors" value="false" />
-      <option name="description" />
-      <option name="exitCodeBehavior" value="ERROR" />
-      <option name="fileExtension" value="*" />
-      <option name="immediateSync" value="true" />
-      <option name="name" value="auto Commit and Push" />
-      <option name="output" value="" />
-      <option name="outputFilters">
-        <array />
-      </option>
-      <option name="outputFromStdout" value="true" />
-      <option name="program" value="powershell.exe" />
-      <option name="runOnExternalChanges" value="true" />
-      <option name="scopeName" value="Project Files" />
-      <option name="trackOnlyRoot" value="false" />
-      <option name="workingDir" value="$ProjectFileDir$" />
-      <envs />
-    </TaskOptions>
+    <enabled-global>
+      <option value="auto Commit and Push" />
+      <option value="Auto Commit and Push" />
+    </enabled-global>
   </component>
 </project>

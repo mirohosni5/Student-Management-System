@@ -4,13 +4,13 @@ import java.io.*;
 import java.util.*;
 
 public abstract class DataHandler {
-    // we store everything as Objects and cast in child classes
+    
     protected final ArrayList<Object> students = new ArrayList<>();
 
     
     public abstract Object parseLine(String line);
 
-    
+
     public abstract String toLine(Object obj);
 
     // return the unique key (e.g., Student ID as String)

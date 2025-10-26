@@ -75,7 +75,7 @@ public abstract class DataHandler {
         records.add(obj);
     }
     public void deleteRecord(String key) {
-        Object target = getRecord(key);
+        Object target = getAll(key);
         if (target == null) {
             System.out.println("id isn't there");
             return;

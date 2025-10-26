@@ -28,15 +28,14 @@ public abstract class DataHandler {
             return;
         }
 
-        try {
+        try (BufferedReader br = new BufferedReader(new FileReader(f))) {
             String line;
             while ((line = br.readLine()) != null) {
-                recordInterfaces rec = createRecord(line);
-                if (rec != null) records.add(rec);
+                Object obj = parseLine(line);
+                if (obj != null) records.add(obj);
             }
-        }
-        catch (IOException e) {
-            System.out.println("Error reading file");
+        } catch (IOException e) {
+            System.out.println("Error reading: " + e.getMessage());
         }
 
         try {

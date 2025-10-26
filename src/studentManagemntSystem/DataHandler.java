@@ -46,7 +46,7 @@ public abstract Object creatRecord(String line);
             System.out.println("Error closing file");
         }
     }
-   
+
     public Object get(String key) {
         for (Object obj : students) {
             if (keyoff(obj).equalsIgnoreCase(key))
@@ -67,7 +67,7 @@ public abstract Object creatRecord(String line);
 
         if (keyoff(obj) == null) return;
         if(key.isEmpty()|| contains(key))
-        records.add(obj);
+        students.add(obj);
     }
     public void deleteRecord(String key) {
         Object target = getRecord(key);
@@ -75,7 +75,7 @@ public abstract Object creatRecord(String line);
             System.out.println("id isn't there");
             return;
         }
-        records.remove(target);
+        students.remove(target);
         System.out.println("record deleted " + key);
     }
 

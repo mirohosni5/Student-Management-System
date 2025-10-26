@@ -74,6 +74,9 @@ public abstract class DataHandler {
         if(key.isEmpty()|| contains(key))
         records.add(obj);
     }
-public 
+public void remove(String key) {
+    Object obj = get(key);
+    if (obj != null) records.remove(obj);
+}
 
 }

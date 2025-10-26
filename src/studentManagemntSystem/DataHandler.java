@@ -52,6 +52,8 @@ public abstract class DataHandler {
             System.out.println("Error saving: " + e.getMessage());
         }
     }
+    public boolean contains(String key) { return get(key) != null; }
+
     public void add(Object obj) {
         if (obj == null) return;
         String key =keyoff(obj);

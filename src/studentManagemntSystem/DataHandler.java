@@ -13,7 +13,7 @@ public abstract class DataHandler {
 
     public abstract String toLine(Object obj);
 
-    // return the unique key (e.g., Student ID as String)
+    //this is for the unique key
     public abstract String keyOf(Object obj);
 
     // --------- file I/O ----------

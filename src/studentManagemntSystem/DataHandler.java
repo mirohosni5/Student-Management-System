@@ -61,7 +61,7 @@ public abstract Object creatRecord(String line);
         return null;
     }
     public ArrayList<Object> getAll() {
-        return new ArrayList<>(records);
+        return new ArrayList<>(students);
     }
     public boolean contains(String key) {
         return get(key) != null; }

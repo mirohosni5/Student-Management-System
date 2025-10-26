@@ -1,11 +1,6 @@
 package studentManagemntSystem;
 
 public class StudentDatabase extends DataHandler{
-package studentManagemntSystem;
-
-import java.util.ArrayList;
-
-    public class StudentData extends DataHandler {
 
         private int nextId = 1; // used to auto-generate IDs when needed
 

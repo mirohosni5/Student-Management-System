@@ -7,10 +7,10 @@ public abstract class DataHandler {
     
     protected final ArrayList<Object> students = new ArrayList<>();
 
-    
+    //this will turn line to object
     public abstract Object parseLine(String line);
 
-
+//
     public abstract String toLine(Object obj);
 
     //this is for the unique key

@@ -17,7 +17,12 @@ public abstract class DataHandler {
         }
     }
     public void loadFromFile(String filename) {
-        
+        records.clear();
+        File f = new File(filename);
+        if (!f.exists()) {
+            System.out.println("No file yet, starting fresh.");
+            return;
+        }
         try (Scanner scanner = new Scanner(new File(filename))) {
             while (scanner.hasNextLine()) {
                 String line = scanner.nextLine();

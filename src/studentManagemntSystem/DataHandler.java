@@ -52,7 +52,12 @@ public abstract class DataHandler {
             System.out.println("Error saving: " + e.getMessage());
         }
     }
-    public 
+    public Object get(String key) {
+        for (Object obj : records) {
+            if (keyoff(obj).equals(key)) return obj;
+        }
+        return null;
+    }
     public boolean contains(String key) {
         return get(key) != null; }
 

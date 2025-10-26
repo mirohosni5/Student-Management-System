@@ -1,6 +1,6 @@
 package studentManagemntSystem;
 
-public class Student extends Person {
+public class Student extends DataHandler {
     private int ID;
     private String Department;
     private double GPA;

@@ -52,6 +52,7 @@ public abstract class DataHandler {
             System.out.println("Error saving: " + e.getMessage());
         }
     }
+    public 
     public boolean contains(String key) {
         return get(key) != null; }
 

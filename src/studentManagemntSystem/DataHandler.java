@@ -28,7 +28,7 @@ public abstract class DataHandler {
             return;
         }
 
-        try (BufferedReader br = new BufferedReader(new FileReader(f))) {
+        try  {
             String line;
             while ((line = br.readLine()) != null) {
                 Object obj = parseLine(line);

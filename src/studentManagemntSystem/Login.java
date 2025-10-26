@@ -110,8 +110,11 @@ public class Login extends javax.swing.JFrame {
         else if (name.equals("admin")){
                    JOptionPane.showMessageDialog(this, "Invalid password");
                    }
-        else {
+        else if (password.equals("12345")) {
             JOptionPane.showMessageDialog(this, "Invalid User Name");
+        }
+        else {
+            JOptionPane.showMessageDialog(this, "Invalid User Name and Password");
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 

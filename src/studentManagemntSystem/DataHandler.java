@@ -59,7 +59,7 @@ public abstract class DataHandler {
         }
         return null;
     }
-    public 
+    public ArrayList
     public boolean contains(String key) {
         return get(key) != null; }
 

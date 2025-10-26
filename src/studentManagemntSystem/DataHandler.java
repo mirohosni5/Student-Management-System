@@ -4,6 +4,7 @@ import java.io.*;
 import java.util.*;
 
 public abstract class DataHandler extends Person {
+
     
     protected final ArrayList<Object> students = new ArrayList<>();
 

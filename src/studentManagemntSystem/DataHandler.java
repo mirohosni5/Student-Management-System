@@ -3,7 +3,7 @@ import java.io.*;
 import java.util.*;
 public abstract class DataHandler {
     public final ArrayList<Object> students = new ArrayList<>();
-    
+
 public abstract Object creatRecord(String line);
     public abstract Object parseli(String line);
 
@@ -33,7 +33,7 @@ public abstract Object creatRecord(String line);
             String line;
             while ((line = br.readLine()) != null) {
                 Object obj = parseli(line);
-                if (obj != null) records.add(obj);
+                if (obj != null) students.add(obj);
             }
         } catch (IOException e) {
             System.out.println("Error reading: " + e.getMessage());

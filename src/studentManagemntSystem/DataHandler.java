@@ -58,7 +58,7 @@ public abstract class DataHandler {
 
 
         if (keyoff(obj) == null) return;
-        if(key.isEmpty()||contains(key))
+        if(key.isEmpty()|| contains(key))
         records.add(obj);
     }
 

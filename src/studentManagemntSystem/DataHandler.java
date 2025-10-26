@@ -54,7 +54,7 @@ public abstract Object creatRecord(String line);
         }
     }
     public Object get(String key) {
-        for (Object obj : records) {
+        for (Object obj : students) {
             if (keyoff(obj).equalsIgnoreCase(key))
                 return obj;
         }

@@ -16,7 +16,7 @@ public abstract class DataHandler {
     //this is for the unique key
     public abstract String keyOf(Object obj);
 
-    // --------- file I/O ----------
+    // file functions
     public void saveToFile(String filename){
         try (PrintWriter pw = new PrintWriter(new FileWriter(filename))) {
             for (Object obj : students) {

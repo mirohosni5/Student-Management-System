@@ -11,7 +11,7 @@ public abstract class DataHandler {
     public abstract String keyoff(Object obj);
     public void saveToFile(){
         try (PrintWriter pw = new PrintWriter(new FileWriter(filename))) {
-            for (Object obj : records) pw.println(toLine(obj));
+            for (Object obj : records) pw.println(toline(obj));
         } catch (IOException e) {
             System.out.println("Error saving: " + e.getMessage());
         }

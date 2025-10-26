@@ -53,7 +53,8 @@ public abstract class DataHandler {
         }
     }
     public void add(Object obj) {
-        if 
+        if (obj == null) return;
+        
         records.add(obj);
     }
 

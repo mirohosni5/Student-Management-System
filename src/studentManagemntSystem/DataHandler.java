@@ -54,7 +54,8 @@ public abstract class DataHandler {
     }
     public Object get(String key) {
         for (Object obj : records) {
-            if (keyoff(obj).equalsIgnoreCase(key)) return obj;
+            if (keyoff(obj).equalsIgnoreCase(key))
+                return obj;
         }
         return null;
     }

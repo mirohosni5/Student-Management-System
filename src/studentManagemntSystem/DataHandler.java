@@ -45,6 +45,12 @@ public abstract class DataHandler {
             System.out.println("Error closing file");
         }
     }
-
+    public void saveToFile(String filename) {
+        try (PrintWriter pw = new PrintWriter(new FileWriter(filename))) {
+            for (Object obj : records) pw.println(toLine(obj));
+        } catch (IOException e) {
+            System.out.println("Error saving: " + e.getMessage());
+        }
+    }
 
 }

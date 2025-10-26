@@ -74,9 +74,15 @@ public abstract class DataHandler {
         if(key.isEmpty()|| contains(key))
         records.add(obj);
     }
-public void remove(String key) {
-    Object obj = get(key);
-    if (obj != null) records.remove(obj);
-}
+    public void deleteRecord(String key){
+        recordInterfaces target = getRecord(key);
+        if (target == null) {
+            System.out.println("id isn't there");
+            return;
+        }
+        records.remove(target);
+        System.out.println("record deleted " + key);
+
+    }
 
 }

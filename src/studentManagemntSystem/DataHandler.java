@@ -9,7 +9,7 @@ public abstract class DataHandler {
     public abstract String toline(Object obj);
 
     public abstract String keyoff(Object obj);
-    public void saveToFile(){
+    public void saveToFile(String filename){
         try (PrintWriter pw = new PrintWriter(new FileWriter(filename))) {
             for (Object obj : records) pw.println(toline(obj));
         } catch (IOException e) {

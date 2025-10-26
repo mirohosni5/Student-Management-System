@@ -17,6 +17,9 @@ public abstract class DataHandler {
         }
     }
     public void loadFromFile(String filename) {
+        records.clear();
+        BufferedReader br;
+
         try {
             br = new BufferedReader(new FileReader(filename));
         }

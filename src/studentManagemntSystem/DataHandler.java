@@ -86,7 +86,7 @@ public abstract class DataHandler {
         System.out.println("record deleted " + key);
     }
 
-    // (optional) simple update 
+    
     public void update(String key, Object newData) {
         if (newData == null) {
             System.out.println("invalid record");

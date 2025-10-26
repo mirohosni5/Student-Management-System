@@ -17,20 +17,30 @@ public abstract class DataHandler {
         }
     }
     public void loadFromFile(String filename) {
-        records.clear();
-        File brr = new File(filename);
-        if (!brr.exists()) {
-            System.out.println("No file yet.");
+        try {
+            br = new BufferedReader(new FileReader(filename));
+        }
+        catch (FileNotFoundException e) {
+            System.out.println("File not found");
             return;
         }
-        try (Scanner scanner = new Scanner(new File(filename))) {
-            while (scanner.hasNextLine()) {
-                String line = scanner.nextLine();
-                Object obj = parseli(line);
-                records.add(obj);
+
+        try {
+            String line;
+            while ((line = br.readLine()) != null) {
+                recordInterfaces rec = createRecord(line);
+                if (rec != null) records.add(rec);
             }
-        } catch (FileNotFoundException e) {
-            System.out.println("Error loading: " + e.getMessage());
+        }
+        catch (IOException e) {
+            System.out.println("Error reading file");
+        }
+
+        try {
+            br.close();
+        }
+        catch (IOException e) {
+            System.out.println("Error closing file");
         }
     }
 

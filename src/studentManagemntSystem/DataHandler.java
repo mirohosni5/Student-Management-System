@@ -17,6 +17,7 @@ public abstract class DataHandler {
         }
     }
     public void loadFromFile(String filename) {
+        
         try (Scanner scanner = new Scanner(new File(filename))) {
             while (scanner.hasNextLine()) {
                 String line = scanner.nextLine();

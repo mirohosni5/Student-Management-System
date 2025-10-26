@@ -44,7 +44,7 @@ public abstract class DataHandler {
         }
     }
 
-    
+
     public Object get(String key) {
         for (Object obj : students) {
             if (keyOf(obj).equalsIgnoreCase(key)) return obj;
@@ -75,7 +75,7 @@ public abstract class DataHandler {
         System.out.println("record added " + key);
     }
 
-    // your preferred delete style
+    
     public void deleteRecord(String key) {
         Object target = get(key);
         if (target == null) {

@@ -16,6 +16,17 @@ public abstract class DataHandler {
             System.out.println("Error saving: " + e.getMessage());
         }
     }
+    public void loadFromFile(String filename) {
+        try (Scanner scanner = new Scanner(new File(filename))) {
+            while (scanner.hasNextLine()) {
+                String line = scanner.nextLine();
+                Object obj = parseli(line);
+                records.add(obj);
+            }
+        } catch (FileNotFoundException e) {
+            System.out.println("Error loading: " + e.getMessage());
+        }
+    }
 
 
 }

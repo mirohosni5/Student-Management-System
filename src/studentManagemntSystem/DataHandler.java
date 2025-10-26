@@ -18,7 +18,7 @@ public abstract Object creatRecord(String line);
         }
     }
     public void loadFromFile(String filename) {
-        records.clear();
+        students.clear();
         BufferedReader br;
 
         try {

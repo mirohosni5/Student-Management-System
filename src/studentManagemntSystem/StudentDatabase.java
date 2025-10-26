@@ -1,4 +1,4 @@
 package studentManagemntSystem;
 
-public class StudentDatabase {
+public class StudentDatabase extends {
 }

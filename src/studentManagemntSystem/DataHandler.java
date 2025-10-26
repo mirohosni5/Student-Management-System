@@ -31,7 +31,7 @@ public abstract class DataHandler {
         try  {
             String line;
             while ((line = br.readLine()) != null) {
-                Object obj = parseLine(line);
+                Object obj = parseli(line);
                 if (obj != null) records.add(obj);
             }
         } catch (IOException e) {

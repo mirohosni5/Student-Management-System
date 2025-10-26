@@ -20,7 +20,7 @@ public abstract class DataHandler {
         records.clear();
         File f = new File(filename);
         if (!f.exists()) {
-            System.out.println("No file yet, starting fresh.");
+            System.out.println("No file yet.");
             return;
         }
         try (Scanner scanner = new Scanner(new File(filename))) {

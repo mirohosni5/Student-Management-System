@@ -54,8 +54,8 @@ public abstract class DataHandler {
     }
     public void add(Object obj) {
         if (obj == null) return;
-        String key =keyoff(Object obj);
-        
+        String key =keyoff(obj);
+
         if (keyoff(obj) == null) return;
         records.add(obj);
     }

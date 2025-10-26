@@ -19,7 +19,7 @@ public abstract class DataHandler {
     public void loadFromFile(String filename) {
         records.clear();
         File br = new File(filename);
-        if (!f.exists()) {
+        if (!br.exists()) {
             System.out.println("No file yet.");
             return;
         }

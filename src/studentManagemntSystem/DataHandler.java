@@ -54,7 +54,7 @@ public abstract class DataHandler {
     }
     public void add(Object obj) {
         if (obj == null) return;
-        
+        if (keyoff(obj) == null) return;
         records.add(obj);
     }
 

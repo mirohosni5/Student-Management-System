@@ -4,8 +4,11 @@ import java.io.*;
 import java.util.*;
 
 public abstract class DataHandler extends Person {
+    public DataHandler(String Fullname, int age, String gender) {
+        super(Fullname, age, gender);
+    }
 
-    
+
     protected final ArrayList<Object> students = new ArrayList<>();
 
     //this will turn line to object

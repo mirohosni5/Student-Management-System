@@ -11,13 +11,9 @@ public abstract class DataHandler {
     public abstract String keyoff(Object obj);
     public void saveToFile(){
         try (PrintWriter pw = new PrintWriter(new FileWriter(filename))) {
-            for (Object obj : records) {
-                recordInterfaces rec = (recordInterfaces) obj;
-                pw.println(rec.lineRepresentation());
-            }
-            System.out.println(filename + " is saved");
+            for (Object obj : records) pw.println(toLine(obj));
         } catch (IOException e) {
-            System.out.println(filename + " couldn't save");
+            System.out.println("Error saving: " + e.getMessage());
         }
     }
 

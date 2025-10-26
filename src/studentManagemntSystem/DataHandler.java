@@ -6,6 +6,7 @@ public final ArrayList<Object> students = new ArrayList<>();
 public abstract Object parseli(String line);
 public abstract String toline(Object obj);
 
+
     public abstract void saveToFile(String filename);
 
     public abstract void loadFromFile(String filename);

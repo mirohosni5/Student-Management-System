@@ -52,7 +52,9 @@ public abstract class DataHandler {
             System.out.println("Error saving: " + e.getMessage());
         }
     }
-    public void 
+    public void add(Object obj) {
+        records.add(obj);
+    }
 
 
 }

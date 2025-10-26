@@ -60,7 +60,7 @@ public abstract class DataHandler {
         return null;
     }
     public ArrayList<Object> getAll() {
-        return new ArrayList<>() records;
+        return new ArrayList<>(records);
     }
     public boolean contains(String key) {
         return get(key) != null; }

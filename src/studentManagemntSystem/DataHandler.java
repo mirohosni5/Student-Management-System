@@ -48,7 +48,7 @@ public abstract Object creatRecord(String line);
     }
     public void saveToFile(String filename) {
         try (PrintWriter pw = new PrintWriter(new FileWriter(filename))) {
-            for (Object obj : records) pw.println(toLine(obj));
+            for (Object obj : students) pw.println(toLine(obj));
         } catch (IOException e) {
             System.out.println("Error saving: " + e.getMessage());
         }

@@ -86,21 +86,8 @@ public abstract class DataHandler {
         System.out.println("record deleted " + key);
     }
 
-    
-    public void update(String key, Object newData) {
-        if (newData == null) {
-            System.out.println("invalid record");
-            return;
-        }
-        for (int i = 0; i < students.size(); i++) {
-            Object cur = students.get(i);
-            if (keyOf(cur).equalsIgnoreCase(key)) {
-                // force the same key to stay (ignore any change in newData's key)
-                students.set(i, newData);
-                System.out.println("record updated " + key);
-                return;
-            }
-        }
+
+   
         System.out.println("id isn't there");
     }
 }

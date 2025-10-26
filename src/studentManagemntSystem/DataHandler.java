@@ -3,7 +3,7 @@ import java.io.*;
 import java.util.*;
 public abstract class DataHandler {
     public final ArrayList<Object> students = new ArrayList<>();
-public abstract Object creatRecord
+public abstract Object creatRecord(String line)
     public abstract Object parseli(String line);
 
     public abstract String toline(Object obj);

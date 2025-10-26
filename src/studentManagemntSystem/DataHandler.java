@@ -10,7 +10,7 @@ public abstract class DataHandler {
     //this will turn line to object
     public abstract Object parseLine(String line);
 
-//vice cersa
+//vice versa
     public abstract String toLine(Object obj);
 
     //this is for the unique key

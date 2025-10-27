@@ -68,7 +68,7 @@ public class StudentDatabase extends DataHandler{
                 System.out.println("not valid data");
                 return;
             }
-            newData.setID(id); // keep the same key
+            newData.setID(id); 
             for (int i = 0; i < students.size(); i++) {
                 Student cur = (Student) students.get(i);
                 if (cur.getID() == id) {

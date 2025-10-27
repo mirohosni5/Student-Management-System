@@ -4,7 +4,7 @@ public class LoginHandling {
     protected final AdminData adminData = new AdminData();
     protected final StudentAccountData studentAccData = new StudentAccountData();
 
-    protected Admin currentAdmin;
+    protected Admin current;
     protected StudentAccount currentStudent;
 
     public void loadAdmins(String filename) {

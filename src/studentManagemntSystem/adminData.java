@@ -12,7 +12,8 @@ public class adminData extends DataHandler{
         String user = parts[0].trim();
         String pass = parts[1].trim();
 
-        if (user.length() == 0 || pass.length() == 0) return null;
+        if (user.length() == 0 || pass.length() == 0)
+            return null;
 
         return new Admin(user, pass);}
         @Override

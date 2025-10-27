@@ -105,7 +105,7 @@ public class StudentDatabase extends DataHandler{
 
         term = term.trim().toLowerCase();
 
-        // check if the search is all digits
+        
         boolean isNumber = true;
         for (char c : term.toCharArray()) {
             if (!Character.isDigit(c)) {

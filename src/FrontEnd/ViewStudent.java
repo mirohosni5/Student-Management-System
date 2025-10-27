@@ -18,25 +18,20 @@ studentManagemntSystem.StudentDatabase admin= new studentManagemntSystem.Student
      */
     public ViewStudent() {
         initComponents();
-        
+       admin.loadFromFile("students.txt");
         loadTable();
     }
  public void loadTable()
     {
         
         DefaultTableModel m=(DefaultTableModel) tableStudents.getModel();
-        
+        m.setRowCount(0);
         ArrayList<Student> x=admin.getAllStudents();
-                m.setRowCount(0);
+                
         for (Student s : x) {
-            m.addRow(new Object[]{
-                s.getID(),
-                s.getFullname(),
-                s.getGPA()
-            });
+             m.addRow(new Object[]{s.getID(),s.getFullname(),s.getAge(),s.getGender(),s.getDepartment(),s.getGPA()});
 
-            
-        }
+  }
 
     }
  

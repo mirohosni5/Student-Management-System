@@ -104,7 +104,7 @@ public class StudentDatabase extends DataHandler{
         }
 
         term = term.trim().toLowerCase();
-
+//here we are checking if it is a number so we could search by id
 
         boolean isNumber = true;
         for (char c : term.toCharArray()) {

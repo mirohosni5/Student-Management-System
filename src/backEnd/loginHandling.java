@@ -22,6 +22,8 @@ public class loginHandling {
     public void saveStudentAcc(String filename) {
         studentAccData.saveToFile(filename); }
 
+    
+
     //getters
     public boolean isAdminLogged()   {
         return nowAdmin != null; }
@@ -62,6 +64,6 @@ public class loginHandling {
         nowStudent = null;
     }
 
-   
+
 
 }

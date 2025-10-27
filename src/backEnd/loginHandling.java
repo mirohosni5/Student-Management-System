@@ -4,7 +4,7 @@ public class loginHandling {
     protected final AdminData adminData = new AdminData();
     protected final StudentAccountData studentAccData = new StudentAccountData();
 
-    
+
     protected Admin nowAdmin;
     protected StudentAccount nowStudent;
 
@@ -15,10 +15,14 @@ public class loginHandling {
     public void saveAdmins(String filename) {
         adminData.saveToFile(filename); }
 
+
+
     public void loadStudentAcc(String filename) {
         studentAccData.loadFromFile(filename); }
     public void saveStudentAcc(String filename) {
         studentAccData.saveToFile(filename); }
+
+
 
     //the admin log in part
     public boolean loginAdmin(String username, String password) {
@@ -40,6 +44,7 @@ public class loginHandling {
         nowAdmin = null;
         return true;
     }
+    
 
     public void logout() {
         nowAdmin = null;

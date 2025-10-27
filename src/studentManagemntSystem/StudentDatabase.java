@@ -88,7 +88,7 @@ public class StudentDatabase extends DataHandler{
             return rec == null ? null : (Student) rec;
         }
 
-        
+
         public ArrayList<Student> getAllStudents() {
             ArrayList<Student> out = new ArrayList<>();
             for (Object o : students) out.add((Student) o);

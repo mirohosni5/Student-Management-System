@@ -4,8 +4,11 @@ public class loginHandling {
     protected final AdminData adminData = new AdminData();
     protected final StudentAccountData studentAccData = new StudentAccountData();
 
+    
     protected Admin nowAdmin;
     protected StudentAccount nowStudent;
+
+
 
     public void loadAdmins(String filename) {
         adminData.loadFromFile(filename); }
@@ -53,5 +56,5 @@ public class loginHandling {
         return nowAdmin; }
     public StudentAccount currentStudent() {
         return nowStudent; }
-    
+
 }

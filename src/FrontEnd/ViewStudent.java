@@ -3,7 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
 package FrontEnd;
-import studentManagemntSystem.Student;
+import backEnd.Student;
 import java.util.ArrayList;
 import javax.swing.table.DefaultTableModel;
 

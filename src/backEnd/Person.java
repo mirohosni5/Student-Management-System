@@ -1,4 +1,4 @@
-package studentManagemntSystem;
+package backEnd;
 
 public class Person {
     protected String Fullname;

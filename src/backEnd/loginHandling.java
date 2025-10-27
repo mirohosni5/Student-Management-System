@@ -1,4 +1,4 @@
-package studentManagemntSystem;
+package backEnd;
 
 public class loginHandling {
     public final adminData admins=new adminData();

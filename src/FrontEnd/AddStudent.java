@@ -200,9 +200,9 @@ try {
 } catch (NumberFormatException e) {
     JOptionPane.showMessageDialog(this, "Invalid GPA");
     return;}
-studentManagemntSystem.Student s = new studentManagemntSystem.Student( Integer.parseInt(id), name, Integer.parseInt(age), gender, dept,Double.parseDouble(gpa));
+backEnd.Student s = new backEnd.Student( Integer.parseInt(id), name, Integer.parseInt(age), gender, dept,Double.parseDouble(gpa));
 
-    studentManagemntSystem.StudentDatabase admin= new studentManagemntSystem.StudentDatabase();
+    backEnd.StudentDatabase admin= new backEnd.StudentDatabase();
     admin.loadFromFile("Students.txt");
     admin.addStudent(s);
     admin.saveToFile("Students.txt");

@@ -1,6 +1,6 @@
 package studentManagemntSystem;
 
 public class loginHandling {
-    public final adminData
+    public final adminData admins
     //add here aya
 }

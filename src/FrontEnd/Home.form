@@ -75,7 +75,7 @@
                       <Component id="jButton4" alignment="0" min="-2" pref="167" max="-2" attributes="0"/>
                       <Component id="jButton5" alignment="0" min="-2" pref="167" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="659" max="32767" attributes="0"/>
+                  <EmptySpace pref="402" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>

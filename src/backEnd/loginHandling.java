@@ -48,5 +48,5 @@ public class LoginHandling {
 
     public Admin currentAdmin()         { return currentAdmin; }
     public StudentAccount currentStudent() { return currentStudent; }
-    /// //
+    
 }

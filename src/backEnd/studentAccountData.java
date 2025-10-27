@@ -24,4 +24,13 @@ public class studentAccountData extends DataHandler {
         int id = Integer.parseInt(idText);
         return new StudentAccount(id, pass);
     }
+
+    @Override
+    public String toLine(Object obj) {
+        StudentAccount acc = (StudentAccount) obj; //casting
+        return acc.getStudentId() + "," + acc.getPassword();
+    }
+
+
+
 }

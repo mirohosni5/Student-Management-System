@@ -104,7 +104,7 @@ public class StudentDatabase extends DataHandler{
         ArrayList<Student> result = new ArrayList<>();
 
         if (term == null || term.trim().isEmpty()) {
-            return getAllStudents();
+            return getStudents();
         }
 
         term = term.trim().toLowerCase();

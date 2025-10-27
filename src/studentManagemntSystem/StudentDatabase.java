@@ -95,7 +95,7 @@ public class StudentDatabase extends DataHandler{
             return out;
         }
 
-    // Search by ID or name (no try-catch)
+    // i am search by id and name here
     public ArrayList<Student> search(String term) {
         ArrayList<Student> result = new ArrayList<>();
 

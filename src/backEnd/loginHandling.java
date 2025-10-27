@@ -53,4 +53,5 @@ public class loginHandling {
         return nowAdmin; }
     public StudentAccount currentStudent() {
         return nowStudent; }
+    
 }

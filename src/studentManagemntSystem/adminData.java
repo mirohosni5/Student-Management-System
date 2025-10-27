@@ -14,5 +14,23 @@ public class adminData extends DataHandler{
         if (user.length() == 0 || pass.length() == 0) return null;
 
         return new Admin(user, pass);
+        @Override
+        public String toLine(Object obj) {
+            Admin a = (Admin) obj; // casting
+            return a.getUsername() + "," + a.getPassword();
+        }
+
+        @Override
+        public String keyOf(Object obj) {
+            Admin a = (Admin) obj;
+            return a.getUsername();
+        }
+
+        public Admin find(String username) {
+            Object o = get(username);
+            if (o == null) return null;
+            return (Admin) o;
+        }
+    }
     }
 

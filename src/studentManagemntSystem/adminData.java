@@ -1,4 +1,4 @@
 package studentManagemntSystem;
 
-public class adminData {
+public class adminData extends DataHandler{
 }

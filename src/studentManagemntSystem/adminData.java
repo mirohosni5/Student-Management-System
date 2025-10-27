@@ -6,7 +6,8 @@ public class adminData extends DataHandler{
         if (line == null || line.trim().isEmpty()) return null;
 
         String[] parts = line.split(",", -1);
-        if (parts.length != 2) return null;
+        if (parts.length != 2)
+            return null;
 
         String user = parts[0].trim();
         String pass = parts[1].trim();
@@ -32,5 +33,5 @@ public class adminData extends DataHandler{
             return (Admin) o;
         }
     }
-    
+
 

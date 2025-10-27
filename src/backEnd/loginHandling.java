@@ -6,6 +6,6 @@ public class loginHandling {
     public StudentAccount nowStudents;
     public Admin now;
 
-    //add here aya
+    
 }
 

@@ -1,8 +1,9 @@
 package studentManagemntSystem;
 
 public class Admin {
-    
-    public String
+
+    public String username;
+    public 
 
 
 }

@@ -38,8 +38,8 @@ public class StudentAccountData extends DataHandler {
     }
 
     public StudentAccount find(int id) {
-        Object o = get(String.valueOf(id));
-        if (o == null) return null;
+        Object obj = get(String.valueOf(id));
+        if (obj == null) return null;
         return (StudentAccount) o;
     }
 

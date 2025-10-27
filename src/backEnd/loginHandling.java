@@ -2,7 +2,7 @@ package backEnd;
 
 public class loginHandling {
     public final adminData admins=new adminData();
-    public final 
+    public final Student 
     public Admin now;
 
     //add here aya

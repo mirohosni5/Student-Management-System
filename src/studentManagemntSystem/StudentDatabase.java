@@ -105,7 +105,7 @@ public class StudentDatabase extends DataHandler{
 
         term = term.trim().toLowerCase();
 
-        
+
         boolean isNumber = true;
         for (char c : term.toCharArray()) {
             if (!Character.isDigit(c)) {
@@ -114,7 +114,7 @@ public class StudentDatabase extends DataHandler{
             }
         }
 
-        // if it’s a number, search by ID
+
         if (isNumber) {
             int id = Integer.parseInt(term);
             Student s = getById(id);

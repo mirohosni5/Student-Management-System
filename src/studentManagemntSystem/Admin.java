@@ -13,4 +13,8 @@ public Admin(String username, String password){
     public String getPassword() {
         return password;
     }
+
+    public String getUsername() {
+        return username;
+    }
 }

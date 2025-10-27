@@ -119,21 +119,39 @@ public class StudentDatabase extends DataHandler{
             return list;
         }
 
-        // ====== super simple validation (kept minimal) ======
-        private boolean isValid(Student s) {
-            if (s == null)
-                return false;
-            if (s.getFullname() == null || s.getFullname().trim().isEmpty())
-                return false;
-            if (s.getDepartment() == null || s.getDepartment().trim().isEmpty())
-                return false;
-            if (s.getAge() < 15 || s.getAge() > 100)
-                return false;
-            String g = s.getGender() == null ? "" : s.getGender().trim();
-            if (!(g.equalsIgnoreCase("Male") || g.equalsIgnoreCase("Female"))) return false;
-            if (Double.isNaN(s.getGPA()) || s.getGPA() < 0.0 || s.getGPA() > 4.0) return false;
-            return true;
-        }
+    private boolean isValid(Student s) {
+        if (s == null)
+            return false;
+
+        if (s.getFullname() == null)
+            return false;
+        if (s.getFullname().trim().isEmpty())
+            return false;
+
+        if (s.getDepartment() == null)
+            return false;
+        if (s.getDepartment().trim().isEmpty())
+            return false;
+
+        if (s.getAge() < 15 || s.getAge() > 100)
+            return false;
+
+        String g = s.getGender();
+        if (g == null)
+            return false;
+        g = g.trim();
+        if (!g.equalsIgnoreCase("Male") && !g.equalsIgnoreCase("Female"))
+            return false;
+
+        double gpa = s.getGPA();
+        if (Double.isNaN(gpa))
+            return false;
+        if (gpa < 0.0 || gpa > 4.0)
+            return false;
+
+        return true;
     }
+
+}
 
 

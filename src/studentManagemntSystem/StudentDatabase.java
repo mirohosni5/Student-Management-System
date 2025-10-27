@@ -59,9 +59,9 @@ public class StudentDatabase extends DataHandler{
                 return;
             }
             if (s.getID() <= 0 || contains(String.valueOf(s.getID()))) {
-                s.setID(nextId++); // auto ID
+                s.setID(nextId++); 
             }
-            add(s); 
+            add(s);
         }
 
         // Update by ID (keeps same ID)

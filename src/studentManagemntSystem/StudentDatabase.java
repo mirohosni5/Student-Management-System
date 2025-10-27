@@ -61,7 +61,7 @@ public class StudentDatabase extends DataHandler{
             if (s.getID() <= 0 || contains(String.valueOf(s.getID()))) {
                 s.setID(nextId++); // auto ID
             }
-            add(s); // uses parent prints: "record added <id>" or "id exists"
+            add(s); 
         }
 
         // Update by ID (keeps same ID)

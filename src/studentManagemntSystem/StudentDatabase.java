@@ -27,7 +27,7 @@ public class StudentDatabase extends DataHandler{
 
                 if (id >= nextId) nextId = id + 1;
 
-                return s; // pa
+                return s;
             } catch (Exception e) {
                 return null; // skip broken line quietly
             }

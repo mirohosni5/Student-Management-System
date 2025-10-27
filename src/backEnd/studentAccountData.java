@@ -24,6 +24,4 @@ public class studentAccountData extends DataHandler {
         int id = Integer.parseInt(idText);
         return new StudentAccount(id, pass);
     }
-
-
 }

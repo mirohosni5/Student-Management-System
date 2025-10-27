@@ -11,7 +11,7 @@ public class StudentDatabase extends DataHandler{
         public Object parseLine(String line) {
             if (line == null || line.trim().isEmpty()) return null;
 
-            String[] p = line.split(",", -1); // keep empty cells if any
+            String[] p = line.split(",", -1); //here we keeping empty cells
             if (p.length != 6) return null;
 
             try {

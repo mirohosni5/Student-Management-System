@@ -121,7 +121,7 @@ public class StudentDatabase extends DataHandler{
 
         if (isNumber) {
             int id = Integer.parseInt(term);
-            Student s = getId(id);
+            Student s = getingId(id);
             if (s != null) result.add(s);
             return result;
         }

@@ -11,7 +11,8 @@ public class StudentDatabase extends DataHandler{
             if (line == null || line.trim().isEmpty()) return null;
 
             String[] p = line.split(",", -1); //here we keeping empty cells
-            if (p.length != 6) return null;
+            if (p.length != 6)
+                return null;
 
             try {
                 int id        = Integer.parseInt(p[0].trim());

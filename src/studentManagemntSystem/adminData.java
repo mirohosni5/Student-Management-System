@@ -28,7 +28,7 @@ public class adminData extends DataHandler{
             return a.getUsername();
         }
 
-        public Admin get(String username) {
+        public Admin getit(String username) {
             Object o = get(username);
             if (o == null) return null;
             return (Admin) o;

@@ -7,11 +7,15 @@ public class LoginHandling {
     protected Admin currentAdmin;
     protected StudentAccount currentStudent;
 
-    public void loadAdmins(String filename) { adminData.loadFromFile(filename); }
-    public void saveAdmins(String filename) { adminData.saveToFile(filename); }
+    public void loadAdmins(String filename) {
+        adminData.loadFromFile(filename); }
+    public void saveAdmins(String filename) {
+        adminData.saveToFile(filename); }
 
-    public void loadStudentAcc(String filename) { studentAccData.loadFromFile(filename); }
-    public void saveStudentAcc(String filename) { studentAccData.saveToFile(filename); }
+    public void loadStudentAcc(String filename) {
+        studentAccData.loadFromFile(filename); }
+    public void saveStudentAcc(String filename) {
+        studentAccData.saveToFile(filename); }
 
     //the admin login part
     public boolean loginAdmin(String username, String password) {
@@ -48,5 +52,5 @@ public class LoginHandling {
 
     public Admin currentAdmin()         { return currentAdmin; }
     public StudentAccount currentStudent() { return currentStudent; }
-    
+
 }

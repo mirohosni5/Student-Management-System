@@ -1,6 +1,6 @@
 package backEnd;
 
-public class studentAccountData extends DataHandler {
+public class StudentAccountData extends DataHandler {
     @Override
     public Object parseLine(String line) {
         if (line == null) return null;

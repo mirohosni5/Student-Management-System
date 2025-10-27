@@ -4,7 +4,7 @@ import java.util.*;
 
 public class StudentDatabase extends DataHandler{
 
-        private int nextId = 1; // used to auto-generate IDs when needed
+        private int nextId = 1; // this is for auto generating ids
 
         //ID,Fullname,Age,Gender,Department,GPA
         @Override

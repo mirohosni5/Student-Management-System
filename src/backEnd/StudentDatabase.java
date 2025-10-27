@@ -53,7 +53,7 @@ public class StudentDatabase extends DataHandler{
 
      
         public void addStudent(Student s) {
-            if (!isValid(s)) {
+            if (!isInValid(s)) {
                 System.out.println("invalid data");
                 return;
             }

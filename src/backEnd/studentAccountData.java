@@ -37,4 +37,10 @@ public class studentAccountData extends DataHandler {
         return String.valueOf(acc.getStudentId());
     }
 
+    public StudentAccount find(int id) {
+        Object o = get(String.valueOf(id));
+        if (o == null) return null;
+        return (StudentAccount) o;
+    }
+
 }

@@ -31,6 +31,10 @@ public class studentAccountData extends DataHandler {
         return acc.getStudentId() + "," + acc.getPassword();
     }
 
-
+    @Override
+    public String keyOf(Object obj) {
+        StudentAccount acc = (StudentAccount) obj;
+        return String.valueOf(acc.getStudentId());
+    }
 
 }

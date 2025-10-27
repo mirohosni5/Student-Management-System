@@ -165,7 +165,10 @@ public class StudentDatabase extends DataHandler{
         double gpa = s.getGPA();
         if (Double.isNaN(gpa)) //NaN means not a number
             return false;
-        return !(gpa < 0.0) && !(gpa > 4.0);
+        if (gpa < 0.0 || gpa > 4.0)
+            return false;
+
+        return true;
     }
 
 }

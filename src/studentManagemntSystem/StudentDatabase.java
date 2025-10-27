@@ -122,7 +122,7 @@ public class StudentDatabase extends DataHandler{
             return result;
         }
 
-        // otherwise, search by name
+        //in another case we are searching by name
         for (Object obj : students) {
             Student s = (Student) obj;
             String name = s.getFullname();

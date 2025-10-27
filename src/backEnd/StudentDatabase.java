@@ -93,7 +93,7 @@ public class StudentDatabase extends DataHandler{
 
 
 
-    public ArrayList<Student> getAllStudents() {
+    public ArrayList<Student> getStudents() {
             ArrayList<Student> out = new ArrayList<>();
             for (Object o : students) out.add((Student) o);
             return out;

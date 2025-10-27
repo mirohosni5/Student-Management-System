@@ -1,4 +1,5 @@
 package backEnd;
 
-public class studentAccountData {
+public class studentAccountData extends DataHandler{
+
 }

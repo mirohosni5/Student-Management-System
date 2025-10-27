@@ -82,13 +82,13 @@ public class StudentDatabase extends DataHandler{
             System.out.println("id isn't there");
         }
 
-        // Get one by ID (typed)
+
         public Student getById(int id) {
             Object rec = get(String.valueOf(id));
             return rec == null ? null : (Student) rec;
         }
 
-        // Get all (typed)
+        
         public ArrayList<Student> getAllStudents() {
             ArrayList<Student> out = new ArrayList<>();
             for (Object o : students) out.add((Student) o);

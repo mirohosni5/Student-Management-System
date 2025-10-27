@@ -32,5 +32,5 @@ public class adminData extends DataHandler{
             return (Admin) o;
         }
     }
-    }
+    
 

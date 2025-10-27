@@ -82,7 +82,7 @@ public class StudentDatabase extends DataHandler{
         }
 
 
-    public Student getId(int id) {
+    public Student getingId(int id) {
         Object rec = get(String.valueOf(id));
         if (rec == null) {
             return null;

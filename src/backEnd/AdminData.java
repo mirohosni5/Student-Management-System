@@ -3,7 +3,8 @@ package backEnd;
 public class AdminData extends DataHandler{
     @Override
     public Object parseLine(String line) {
-        if (line == null || line.trim().isEmpty()) return null;
+        if (line == null || line.trim().isEmpty())
+            return null;
 
         String[] parts = line.split(",", -1);
         if (parts.length != 2)

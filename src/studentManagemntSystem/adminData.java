@@ -13,7 +13,7 @@ public class adminData extends DataHandler{
 
         if (user.length() == 0 || pass.length() == 0) return null;
 
-        return new Admin(user, pass);
+        return new Admin(user, pass);}
         @Override
         public String toLine(Object obj) {
             Admin a = (Admin) obj; // casting

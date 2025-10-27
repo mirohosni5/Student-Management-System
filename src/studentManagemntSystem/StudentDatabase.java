@@ -64,7 +64,7 @@ public class StudentDatabase extends DataHandler{
             add(s);
         }
 
-        // Update by ID (keeps same ID)
+        
         public void updateStudent(int id, Student newData) {
             if (!isValid(newData)) {
                 System.out.println("not valid data");

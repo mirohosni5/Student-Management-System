@@ -15,4 +15,4 @@ public class adminData extends DataHandler{
 
         return new Admin(user, pass);
     }
-}
+

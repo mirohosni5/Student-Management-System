@@ -1,6 +1,6 @@
 package backEnd;
 
-public class adminData extends DataHandler{
+public class AdminData extends DataHandler{
     @Override
     public Object parseLine(String line) {
         if (line == null || line.trim().isEmpty()) return null;
@@ -28,7 +28,7 @@ public class adminData extends DataHandler{
             return a.getUsername();
         }
 
-        public Admin getUsername(String username) {
+        public Admin find(String username) {
             Object o = get(username);
             if (o == null) return null;
             return (Admin) o;

@@ -62,15 +62,6 @@ public class loginHandling {
         nowStudent = null;
     }
 
-    //getters
-    public boolean isAdminLogged()   {
-        return nowAdmin != null; }
-    public boolean isStudentLogged() {
-        return nowStudent!= null; }
-
-    public Admin currentAdmin()         {
-        return nowAdmin; }
-    public StudentAccount currentStudent() {
-        return nowStudent; }
+   
 
 }

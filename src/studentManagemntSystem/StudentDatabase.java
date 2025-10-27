@@ -121,9 +121,12 @@ public class StudentDatabase extends DataHandler{
 
         // ====== super simple validation (kept minimal) ======
         private boolean isValid(Student s) {
-            if (s == null) return false;
-            if (s.getFullname() == null || s.getFullname().trim().isEmpty()) return false;
-            if (s.getDepartment() == null || s.getDepartment().trim().isEmpty()) return false;
+            if (s == null)
+                return false;
+            if (s.getFullname() == null || s.getFullname().trim().isEmpty())
+                return false;
+            if (s.getDepartment() == null || s.getDepartment().trim().isEmpty())
+                return false;
             if (s.getAge() < 15 || s.getAge() > 100) return false;
             String g = s.getGender() == null ? "" : s.getGender().trim();
             if (!(g.equalsIgnoreCase("Male") || g.equalsIgnoreCase("Female"))) return false;

@@ -29,13 +29,13 @@ public class StudentDatabase extends DataHandler{
 
                 return s;
             } catch (Exception e) {
-                return null; // skip broken line quietly
+                return null;
             }
         }
 
         @Override
         public String toLine(Object obj) {
-            Student s = (Student) obj; // casting (your style)
+            Student s = (Student) obj; // casting
             return s.getID() + "," +
                     s.getFullname() + "," +
                     s.getAge() + "," +

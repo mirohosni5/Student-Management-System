@@ -138,7 +138,7 @@ public class StudentDatabase extends DataHandler{
         return result;
     }
 
-    private boolean isValid(Student s) {
+    private boolean isInValid(Student s) {
         if (s == null)
             return false;
 

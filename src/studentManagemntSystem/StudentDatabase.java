@@ -24,7 +24,7 @@ public class StudentDatabase extends DataHandler{
 
                 Student s = new Student(id, name, age, gender, dept, gpa);
 
-
+                
                 if (id >= nextId) nextId = id + 1;
 
                 return s; // parent stores it as Object
@@ -68,7 +68,7 @@ public class StudentDatabase extends DataHandler{
                 System.out.println("not valid data");
                 return;
             }
-            newData.setID(id
+            newData.setID(id); // keep the same key
             for (int i = 0; i < students.size(); i++) {
                 Student cur = (Student) students.get(i);
                 if (cur.getID() == id) {

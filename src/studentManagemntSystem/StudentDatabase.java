@@ -50,9 +50,7 @@ public class StudentDatabase extends DataHandler{
             return String.valueOf(s.getID());
         }
 
-        // ====== Nice typed helpers (simple & friendly) ======
-
-        // Add with basic validation + auto-ID if 0 or duplicate
+     
         public void addStudent(Student s) {
             if (!isValid(s)) {
                 System.out.println("invalid data");
@@ -64,7 +62,7 @@ public class StudentDatabase extends DataHandler{
             add(s);
         }
 
-        
+
         public void updateStudent(int id, Student newData) {
             if (!isValid(newData)) {
                 System.out.println("not valid data");

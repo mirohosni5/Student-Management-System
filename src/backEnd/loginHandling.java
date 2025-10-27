@@ -30,8 +30,8 @@ public class loginHandling {
     public boolean isStudentLogged() {
         return nowStudent!= null; }
 
-    
-    public Admin currentAdmin()         {
+
+    public Admin newtAdmin()         {
         return nowAdmin; }
     public StudentAccount currentStudent() {
         return nowStudent; }

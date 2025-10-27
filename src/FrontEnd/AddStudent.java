@@ -194,11 +194,11 @@ if (gender.equals("Select") || dept.equals("Select")) {
 try {
     double g = Double.parseDouble(gpa);
     if (g < 0.0 || g > 4.0) {
-        JOptionPane.showMessageDialog(this, "Invalid GPA");
+        JOptionPane.showMessageDialog(this, "Invalid GPA (must be from 0 to 4) ");
         return;
     }
 } catch (NumberFormatException e) {
-    JOptionPane.showMessageDialog(this, "Invalid GPA");
+    JOptionPane.showMessageDialog(this, "Invalid GPA(must be from 0 to 4)");
     return;}
 studentManagemntSystem.Student s = new studentManagemntSystem.Student( Integer.parseInt(id), name, Integer.parseInt(age), gender, dept,Double.parseDouble(gpa));
 

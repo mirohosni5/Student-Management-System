@@ -12,7 +12,7 @@ import javax.swing.table.DefaultTableModel;
  * @author Engyz
  */
 public class ViewStudent extends javax.swing.JPanel {
-StudentManagement r =new StudentManagement();
+StudentManagement.Student r =new StudentManagement();
     /**
      * Creates new form ViewStudents
      */

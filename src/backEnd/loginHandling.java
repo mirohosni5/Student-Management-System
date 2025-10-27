@@ -31,7 +31,7 @@ public class loginHandling {
         return nowStudent!= null; }
 
 
-    public Admin newtAdmin()         {
+    public Admin currentAdmin()         {
         return nowAdmin; }
     public StudentAccount currentStudent() {
         return nowStudent; }

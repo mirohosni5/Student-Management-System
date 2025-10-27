@@ -22,6 +22,17 @@ public class loginHandling {
     public void saveStudentAcc(String filename) {
         studentAccData.saveToFile(filename); }
 
+    //getters
+    public boolean isAdminLogged()   {
+        return nowAdmin != null; }
+    public boolean isStudentLogged() {
+        return nowStudent!= null; }
+
+    public Admin currentAdmin()         {
+        return nowAdmin; }
+    public StudentAccount currentStudent() {
+        return nowStudent; }
+
 
 
     //the admin log in part
@@ -44,7 +55,7 @@ public class loginHandling {
         nowAdmin = null;
         return true;
     }
-    
+
 
     public void logout() {
         nowAdmin = null;

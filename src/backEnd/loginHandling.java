@@ -22,7 +22,7 @@ public class loginHandling {
     public void saveStudentAcc(String filename) {
         studentAccData.saveToFile(filename); }
 
-    
+
 
     //getters
     public boolean isAdminLogged()   {
@@ -30,10 +30,12 @@ public class loginHandling {
     public boolean isStudentLogged() {
         return nowStudent!= null; }
 
+    
     public Admin currentAdmin()         {
         return nowAdmin; }
     public StudentAccount currentStudent() {
         return nowStudent; }
+
 
 
 

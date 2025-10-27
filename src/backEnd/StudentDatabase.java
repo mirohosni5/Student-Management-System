@@ -53,7 +53,7 @@ public class StudentDatabase extends DataHandler{
 
      
         public void addStudent(Student s) {
-            if (!isInValid(s)) {
+            if (isInValid(s)) {
                 System.out.println("invalid data");
                 return;
             }
@@ -65,7 +65,7 @@ public class StudentDatabase extends DataHandler{
 
 
         public void updateStudent(int id, Student newData) {
-            if (!isInValid(newData)) {
+            if (isInValid(newData)) {
                 System.out.println("not valid data");
                 return;
             }
@@ -140,35 +140,35 @@ public class StudentDatabase extends DataHandler{
 
     private boolean isInValid(Student s) {
         if (s == null)
-            return false;
+            return true;
 
         if (s.getFullname() == null)
-            return false;
+            return true;
         if (s.getFullname().trim().isEmpty())
-            return false;
+            return true;
 
         if (s.getDepartment() == null)
-            return false;
+            return true;
         if (s.getDepartment().trim().isEmpty())
-            return false;
+            return true;
 
         if (s.getAge() < 15 || s.getAge() > 100)
-            return false;
+            return true;
 
         String g = s.getGender();
         if (g == null)
-            return false;
+            return true;
         g = g.trim();
         if (!g.equalsIgnoreCase("Male") && !g.equalsIgnoreCase("Female"))
-            return false;
+            return true;
 
         double gpa = s.getGPA();
         if (Double.isNaN(gpa)) //NaN means not a number
-            return false;
+            return true;
         if (gpa < 0.0 || gpa > 4.0)
-            return false;
+            return true;
 
-        return true;
+        return false;
     }
 
 }

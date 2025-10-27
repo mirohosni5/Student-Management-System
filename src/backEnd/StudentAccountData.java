@@ -27,7 +27,7 @@ public class StudentAccountData extends DataHandler {
 
     @Override
     public String toLine(Object obj) {
-        StudentAccount acc = (StudentAccount) obj; //casting
+        StudentAccount acc = (StudentAccount) obj; 
         return acc.getStudentId() + "," + acc.getPassword();
     }
 

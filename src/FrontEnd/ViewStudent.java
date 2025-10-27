@@ -12,27 +12,29 @@ import javax.swing.table.DefaultTableModel;
  * @author Engyz
  */
 public class ViewStudent extends javax.swing.JPanel {
-StudentManagement r =new StudentManagement();
+studentManagemntSystem.StudentDatabase admin= new studentManagemntSystem.StudentDatabase();
     /**
      * Creates new form ViewStudents
      */
     public ViewStudent() {
         initComponents();
-        
+       admin.loadFromFile("students.txt");
         loadTable();
     }
  public void loadTable()
     {
         
         DefaultTableModel m=(DefaultTableModel) tableStudents.getModel();
-        
-        ArrayList<Student> x=r.readFromFile();
-        for (int i = 0; i < x.size(); i++) {
-            Student s=x.get(i);
-           m.addRow(new Object[]{s.getID(),s.getFullname(),s.getGPA()});
-            
-        }
+        m.setRowCount(0);
+        ArrayList<Student> x=admin.getAllStudents();
+                
+        for (Student s : x) {
+             m.addRow(new Object[]{s.getID(),s.getFullname(),s.getAge(),s.getGender(),s.getDepartment(),s.getGPA()});
+
+  }
+
     }
+ 
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -47,13 +49,13 @@ StudentManagement r =new StudentManagement();
 
         tableStudents.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null}
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null}
             },
             new String [] {
-                "ID", "Name", "GPA"
+                "ID", "Name", "Age", "Gender", "Department", "GPA"
             }
         ));
         jScrollPane1.setViewportView(tableStudents);
@@ -62,14 +64,11 @@ StudentManagement r =new StudentManagement();
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 400, Short.MAX_VALUE)
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 622, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 288, Short.MAX_VALUE)
-                .addContainerGap())
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 300, Short.MAX_VALUE)
         );
     }// </editor-fold>//GEN-END:initComponents
 

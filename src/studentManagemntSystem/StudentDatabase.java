@@ -6,7 +6,7 @@ public class StudentDatabase extends DataHandler{
 
         private int nextId = 1; // used to auto-generate IDs when needed
 
-        // CSV: ID,Fullname,Age,Gender,Department,GPA
+        //ID,Fullname,Age,Gender,Department,GPA
         @Override
         public Object parseLine(String line) {
             if (line == null || line.trim().isEmpty()) return null;

@@ -1,5 +1,6 @@
 package backEnd;
 //here we have userlogin and admin login
+
 public class loginHandling {
     protected final AdminData adminData = new AdminData();
     protected final StudentAccountData studentAccData = new StudentAccountData();

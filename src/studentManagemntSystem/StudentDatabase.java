@@ -127,7 +127,8 @@ public class StudentDatabase extends DataHandler{
                 return false;
             if (s.getDepartment() == null || s.getDepartment().trim().isEmpty())
                 return false;
-            if (s.getAge() < 15 || s.getAge() > 100) return false;
+            if (s.getAge() < 15 || s.getAge() > 100)
+                return false;
             String g = s.getGender() == null ? "" : s.getGender().trim();
             if (!(g.equalsIgnoreCase("Male") || g.equalsIgnoreCase("Female"))) return false;
             if (Double.isNaN(s.getGPA()) || s.getGPA() < 0.0 || s.getGPA() > 4.0) return false;

@@ -59,7 +59,7 @@ public class StudentDatabase extends DataHandler{
                 return;
             }
             if (s.getID() <= 0 || contains(String.valueOf(s.getID()))) {
-                s.setID(nextId++); 
+                s.setID(nextId++);
             }
             add(s);
         }
@@ -83,13 +83,18 @@ public class StudentDatabase extends DataHandler{
         }
 
 
-        public Student getById(int id) {
-            Object rec = get(String.valueOf(id));
-            return rec == null ? null : (Student) rec;
+    public Student getById(int id) {
+        Object rec = get(String.valueOf(id));
+        if (rec == null) {
+            return null;
+        } else {
+            return (Student) rec;
         }
+    }
 
 
-        public ArrayList<Student> getAllStudents() {
+
+    public ArrayList<Student> getAllStudents() {
             ArrayList<Student> out = new ArrayList<>();
             for (Object o : students) out.add((Student) o);
             return out;

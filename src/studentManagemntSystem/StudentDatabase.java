@@ -24,7 +24,7 @@ public class StudentDatabase extends DataHandler{
 
                 Student s = new Student(id, name, age, gender, dept, gpa);
 
-                
+
                 if (id >= nextId) nextId = id + 1;
 
                 return s; // parent stores it as Object

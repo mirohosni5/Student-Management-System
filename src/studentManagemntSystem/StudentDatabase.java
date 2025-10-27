@@ -35,7 +35,7 @@ public class StudentDatabase extends DataHandler{
 
         @Override
         public String toLine(Object obj) {
-            Student s = (Student) obj; // casting
+            Student s = (Student) obj; 
             return s.getID() + "," +
                     s.getFullname() + "," +
                     s.getAge() + "," +

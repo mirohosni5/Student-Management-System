@@ -10,4 +10,7 @@ public Admin(String username, String password){
     this.password=password;
 }
 
+    public String getPassword() {
+        return password;
+    }
 }

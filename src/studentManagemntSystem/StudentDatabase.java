@@ -25,7 +25,8 @@ public class StudentDatabase extends DataHandler{
                 Student s = new Student(id, name, age, gender, dept, gpa);
 
 
-                if (id >= nextId) nextId = id + 1;
+                if (id >= nextId)
+                    nextId = id + 1;
 
                 return s;
             } catch (Exception e) {
@@ -35,7 +36,7 @@ public class StudentDatabase extends DataHandler{
 
         @Override
         public String toLine(Object obj) {
-            Student s = (Student) obj; 
+            Student s = (Student) obj;
             return s.getID() + "," +
                     s.getFullname() + "," +
                     s.getAge() + "," +

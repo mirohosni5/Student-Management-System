@@ -95,29 +95,44 @@ public class StudentDatabase extends DataHandler{
             return out;
         }
 
-        // Search by exact ID or by name substring (case-insensitive)
-        public ArrayList<Student> search(String term) {
-            ArrayList<Student> list = new ArrayList<>();
-            if (term == null || term.trim().isEmpty()) return getAllStudents();
+    // Search by ID or name (no try-catch)
+    public ArrayList<Student> search(String term) {
+        ArrayList<Student> result = new ArrayList<>();
 
-            String q = term.trim().toLowerCase();
-
-            // try ID first
-            try {
-                int id = Integer.parseInt(q);
-                Student s = getById(id);
-                if (s != null) list.add(s);
-                return list;
-            } catch (NumberFormatException ignore) {}
-
-            // fallback: name contains
-            for (Object o : students) {
-                Student s = (Student) o;
-                String name = s.getFullname() == null ? "" : s.getFullname();
-                if (name.toLowerCase().contains(q)) list.add(s);
-            }
-            return list;
+        if (term == null || term.trim().isEmpty()) {
+            return getAllStudents();
         }
+
+        term = term.trim().toLowerCase();
+
+        // check if the search is all digits
+        boolean isNumber = true;
+        for (char c : term.toCharArray()) {
+            if (!Character.isDigit(c)) {
+                isNumber = false;
+                break;
+            }
+        }
+
+        // if it’s a number, search by ID
+        if (isNumber) {
+            int id = Integer.parseInt(term);
+            Student s = getById(id);
+            if (s != null) result.add(s);
+            return result;
+        }
+
+        // otherwise, search by name
+        for (Object obj : students) {
+            Student s = (Student) obj;
+            String name = s.getFullname();
+            if (name != null && name.toLowerCase().contains(term)) {
+                result.add(s);
+            }
+        }
+
+        return result;
+    }
 
     private boolean isValid(Student s) {
         if (s == null)

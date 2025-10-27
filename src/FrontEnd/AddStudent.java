@@ -4,6 +4,7 @@
  */
 package FrontEnd;
 
+import java.awt.Dimension;
 import javax.swing.JOptionPane;
 
 /**
@@ -17,6 +18,7 @@ public class AddStudent extends javax.swing.JPanel {
      */
     public AddStudent() {
         initComponents();
+        setPreferredSize(new Dimension(600,400));
     }
 
     /**
@@ -198,6 +200,17 @@ try {
 } catch (NumberFormatException e) {
     JOptionPane.showMessageDialog(this, "Invalid GPA");
     return;}
+studentManagemntSystem.Student s = new studentManagemntSystem.Student( Integer.parseInt(id), name, Integer.parseInt(age), gender, dept,Double.parseDouble(gpa));
+
+    studentManagemntSystem.StudentDatabase admin= new studentManagemntSystem.StudentDatabase();
+    admin.loadFromFile("Students.txt");
+    admin.addStudent(s);
+    admin.saveToFile("Students.txt");
+    JOptionPane.showMessageDialog(this, "Student added successfully!");
+    IDText.setText("");
+    nameText.setText("");
+    ageText.setText("");
+    gpaText.setText("");
     }//GEN-LAST:event_jButton1ActionPerformed
 
 

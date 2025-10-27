@@ -47,10 +47,13 @@ public class LoginHandling {
     }
 
 
-    public boolean isAdminLogged()   { return currentAdmin != null; }
-    public boolean isStudentLogged() { return currentStudent != null; }
+    public boolean isAdminLogged()   {
+        return currentAdmin != null; }
+    public boolean isStudentLogged() {
+        return currentStudent != null; }
 
-    public Admin currentAdmin()         { return currentAdmin; }
+    public Admin currentAdmin()         {
+        return currentAdmin; }
     public StudentAccount currentStudent() { return currentStudent; }
 
 }

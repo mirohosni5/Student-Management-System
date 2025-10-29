@@ -5,7 +5,7 @@
 package FrontEnd;
 
 import javax.swing.JOptionPane;
-import studentManagemntSystem.StudentDatabase;
+import backEnd.StudentDatabase;
 
 /**
  *
@@ -78,18 +78,20 @@ public class delete extends javax.swing.JPanel {
         if (id.isEmpty()){
             JOptionPane.showMessageDialog(this,"ID cannot be empty");
         }
+        StudentDatabase s = new StudentDatabase();
+        s.loadFromFile("Students.txt");
         try {
-            StudentDatabase s = new StudentDatabase();
-            s.loadFromFile("Students.txt");
             if(!s.contains(id)){
-                JOptionPane.showMessageDialog(this, "Student not found!");
+                JOptionPane.showMessageDialog(this, "Student not found!");}
+            else{
+                s.deleteRecord(id);
+                s.saveToFile("Students.txt");
+                JOptionPane.showMessageDialog(this, "Student deleted successfully!");
             }
-            s.deleteRecord(id);
-            s.saveToFile("Students.txt");
-            JOptionPane.showMessageDialog(this, "Student deleted successfully!");
         }catch(NumberFormatException e){
             JOptionPane.showMessageDialog(this, "Invalid ID");
         }
+        
     }//GEN-LAST:event_jButton1ActionPerformed
 
 

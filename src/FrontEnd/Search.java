@@ -7,8 +7,8 @@ package FrontEnd;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
-import studentManagemntSystem.Student;
-import studentManagemntSystem.StudentDatabase;
+import backEnd.Student;
+import backEnd.StudentDatabase;
 
 /**
  *

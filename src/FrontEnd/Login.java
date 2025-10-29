@@ -99,8 +99,8 @@ public class Login extends javax.swing.JFrame {
     }//GEN-LAST:event_PasswordTextActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        String name = NameText.getText();
-        String password = PasswordText.getText();
+        String name = NameText.getText().trim();
+        String password = PasswordText.getText().trim();
         if(name.equals("admin")&&password.equals("12345"))
            {
                Home h =new Home();

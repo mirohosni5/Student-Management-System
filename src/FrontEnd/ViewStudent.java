@@ -12,7 +12,7 @@ import javax.swing.table.DefaultTableModel;
  * @author Engyz
  */
 public class ViewStudent extends javax.swing.JPanel {
-studentManagemntSystem.StudentDatabase admin= new studentManagemntSystem.StudentDatabase();
+backEnd.StudentDatabase admin= new backEnd.StudentDatabase();
     /**
      * Creates new form ViewStudents
      */
@@ -26,7 +26,7 @@ studentManagemntSystem.StudentDatabase admin= new studentManagemntSystem.Student
         
         DefaultTableModel m=(DefaultTableModel) tableStudents.getModel();
         m.setRowCount(0);
-        ArrayList<Student> x=admin.getAllStudents();
+        ArrayList<Student> x=admin.getStudents();
                 
         for (Student s : x) {
              m.addRow(new Object[]{s.getID(),s.getFullname(),s.getAge(),s.getGender(),s.getDepartment(),s.getGPA()});

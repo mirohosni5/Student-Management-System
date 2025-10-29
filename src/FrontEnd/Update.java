@@ -5,8 +5,8 @@
 package FrontEnd;
 
 import javax.swing.JOptionPane;
-import studentManagemntSystem.Student;
-import studentManagemntSystem.StudentDatabase;
+import backEnd.Student;
+import backEnd.StudentDatabase;
 
 /**
  *
@@ -175,7 +175,7 @@ public class Update extends javax.swing.JPanel {
 
         try {
             int x = Integer.parseInt(id);
-            Student s = admin.getById(x);
+            Student s = admin.getingId(x);
             if (s == null) {
                 JOptionPane.showMessageDialog(this, "Student not found");
                 return;
